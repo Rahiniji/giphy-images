@@ -14,7 +14,7 @@ function ImageGrid(props) {
   const smallScreen = useMediaQuery("(max-width:600px)");
 
   return (
-    <div className={smallScreen ? "rowGrid" : "columnGrid"}>
+    <div className={smallScreen ? "modalRowGrid" : "modalColumnGrid"}>
       {Object.values(images).map((item, itemIndex) => (
         <>
           {item.url && (

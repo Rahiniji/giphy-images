@@ -87,3 +87,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### Modal windows contains all available types of gifs and webp. As size varies from each other, showing that to highlight a difference between them
 
 ### With useMediaQuery, contents fill well in both desktop and mobile views.
+
+### Screenshots:
+
+![Landing page](https://github.com/Rahiniji/giphy-images/blob/master/src/images/Landing_Page.PNG)
+
+![Search results](https://github.com/Rahiniji/giphy-images/blob/master/src/images/Search_Results_Happy.PNG)
+
+### Note:
+Use API key to fetch data

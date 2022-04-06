@@ -33,7 +33,7 @@ function App() {
   const trendingApiUrl = "https://api.giphy.com/v1/gifs/trending";
 
   const count = Math.ceil(displayImages?.length / PER_PAGE);
-  const apiKey = process.env.REACT_APP_GIPHY_API_KEY;
+  const apiKey = "tVaJe9QRTL6VZp9xhBkogbNWFTI9hYnJ";
 
   const handleOpen = (indexVal) => {
     setModalImages(displayImages[indexVal].images);
@@ -141,22 +141,36 @@ function App() {
           <>
             {displayImages.slice(page * 5 - 5, 5 * page).map((i, index) => (
               <div key={`${i.title}-image-${index}`}>
-                <Button onClick={() => handleOpen(index + 5 * (page - 1))}>
-                  <Card sx={{ maxWidth: 345 }}>
+                <Button onClick={() => handleOpen(index + 5 * (page - 1))}
+                style={{border: "2px solid orange" }}>
+                  <Card sx={{ maxWidth: 345}}>
                     <CardMedia
                       component="img"
                       image={i.images.fixed_height.url}
                       alt={i.title}
+                      style={{
+                        width: "15rem",
+                        minHeight: "10rem",
+                        maxHeight: "10rem",
+                      }}
                     />
-                    <CardContent>
+                    <CardContent style={{
+                          color: "orange",
+                          textTransform: "none",
+                          fontSize: "1rem",
+                          maxHeight: "6rem",
+                          minHeight: "6rem"
+                        }}>
                       <Typography
                         gutterBottom
-                        variant="subtitle1"
+                        variant="h6"
                         component="div"
+                        style={{ fontWeight: "bold"}}
+                        
                       >
-                        {i.title}
+                        {i.username}
                       </Typography>
-                      <Typography variant="body2">{i.username}</Typography>
+                      <Typography variant="body2">{i.title}</Typography>
                     </CardContent>
                     <CardActions></CardActions>
                   </Card>
