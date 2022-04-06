@@ -71,7 +71,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 
-## Libraries
+## Libraries used
 ### React
 ### Material UI
 ### Axios
