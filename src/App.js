@@ -33,7 +33,7 @@ function App() {
   const trendingApiUrl = "https://api.giphy.com/v1/gifs/trending";
 
   const count = Math.ceil(displayImages?.length / PER_PAGE);
-  const apiKey = "tVaJe9QRTL6VZp9xhBkogbNWFTI9hYnJ";
+  const apiKey = process.env.REACT_APP_GIPHY_API_KEY;
 
   const handleOpen = (indexVal) => {
     setModalImages(displayImages[indexVal].images);
